@@ -1,0 +1,53 @@
+# ── CFD Daily Brief configuration ──────────────────────────────────
+# Edit this file to tune the radar. No code changes needed.
+
+timezone: "Europe/Madrid"
+
+# How far back to look for news (hours). 26 gives buffer for feed lag.
+lookback_hours: 26
+
+# Direct competitors — each gets a dedicated Google News query
+competitors:
+  high_risk:
+    - GatesFX
+    - Hanko Trade
+    - Magno
+  tier_2:
+    - Hantec Markets
+    - Pepperstone
+    - IC Markets
+    - EC Markets
+    - Deriv
+    - DUPrime
+
+# Industry-wide topic queries (Google News)
+topic_queries:
+  - CFD broker regulation
+  - CySEC enforcement broker
+  - FCA warning CFD
+  - ASIC CFD broker
+  - forex broker acquisition
+  - CFD broker launch
+  - prop trading firm CFD
+  - MetaQuotes MT5 broker
+  - cTrader broker
+  - forex IB program
+
+# Direct RSS feeds (industry press + regulators)
+rss_feeds:
+  - name: Finance Magnates
+    url: https://www.financemagnates.com/feed/
+  - name: FinanceFeeds
+    url: https://financefeeds.com/feed/
+  - name: Leaprate
+    url: https://www.leaprate.com/feed/
+  - name: FCA News
+    url: https://www.fca.org.uk/news/rss.xml
+  - name: FX News Group
+    url: https://fxnewsgroup.com/feed/
+
+# Max articles fed into the analysis (cost control)
+max_items: 60
+
+# Claude model for the analysis step
+model: claude-sonnet-4-6
